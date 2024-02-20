@@ -14,14 +14,14 @@ export default function List() {
         onChange={e => setName(e.target.value)}
       />
       <button onClick={() => {
-        setArtists([
+        setArtists([ //updater funtion
             ...artists,
             {id: nextId++, name: name}
         ]);
       }}>Add</button>
       <ul>
         {artists.map(artist => (
-          <li key={artist.id}>{artist.name}</li>
+          <li key={artist.id}>{artist.name}</li>//key is used to identify the element and to avoid re-rendering the entire list
         ))}
       </ul>
     </>
